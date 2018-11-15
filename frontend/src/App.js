@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './scenes/Home';
+import Quiz from './scenes/Quiz';
+
 
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            showHome: true
+        }
+    }
+
   render() {
-    return (
+
+      return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          {this.state.showHome ? <Home title={"I <3 Nico"}/> : <Quiz/>}
+          <button onClick={() => this.setState({showHome: !this.state.showHome})}>{this.state.showHome ? "Show Quiz" : "Go Home"}</button>
       </div>
     );
   }
