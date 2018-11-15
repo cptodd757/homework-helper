@@ -1,2 +1,1 @@
-# homework-helper
-Homework Helper
+#Homework Helper
