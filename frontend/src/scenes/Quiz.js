@@ -28,12 +28,13 @@ export default class Quiz extends Component {
                             <th>Question</th>
                             <th>Answer</th>
                         </tr>
-                    {this.state.array.map(obj => (
-                        <tr>
-                            <td>{obj.question}</td>
+                    {this.state.array.map(obj => {
+                        var split = obj.question.split("___");
+                        return <tr>
+                            <td><label>{split[0]}</label><textarea/><label>{split[1]}</label></td>
                             <td>{obj.answer}</td>
                         </tr>
-                    ))}
+                    })}
                     </table>
                 </div>
             </div>
