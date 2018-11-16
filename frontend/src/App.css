@@ -26,11 +26,12 @@
 .Quiz  {
   margin:auto;  
   background-color: white;
-  width: 50vw;
-  height: 60vh;
+  width: 70vw;
+  height: auto;
   border-radius: 8px;
   text-align: left;
   padding: 2vw 2vw 2vw 2vw;
+
 }
 
 table{
@@ -48,4 +49,5 @@ p  {
 
 body {
   background-color: lightskyblue;
+  margin-bottom: 10vh;
 }
