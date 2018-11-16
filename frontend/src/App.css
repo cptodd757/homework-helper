@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: steelblue;
 }
 
 .App-logo {
@@ -24,15 +23,27 @@
 }
 
 .Quiz  {
-  background-color: whitesmoke;
+  background-color: white;
   width: 50vw;
+  height: 60vh;
   margin: auto;
-  
+  border-radius: 8px;
 }
+
+.innerQuiz  {
+  width: 40vw;
+  height: 50vh;
+  margin: auto;
+}
+
 h1 {
   color: white;
 }
 
 p  {
   color: black;
+}
+
+body {
+  background-color: lightskyblue;
 }

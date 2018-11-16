@@ -9,8 +9,7 @@ export default class Quiz extends Component {
                     <p>Here is the text from Home: {this.props.app.text}</p>
                     {this.props.app.array.map(obj => (
                         <div>
-                            <h5>{obj.question}</h5>
-                            <p>{obj.answer}</p>
+                            <h5>{obj.question} {obj.answer}</h5>
                         </div>
                     ))}
                 </div>
