@@ -32,7 +32,7 @@ export default class Quiz extends Component {
 
     submitAnswers() {
         this.setState({
-            results: this.state.array.map((obj, i) => obj.answer === this.state.answers[i])
+            results: this.state.array.map((obj, i) => this.state.answers[i] !== null && obj.answer.toLowerCase() === this.state.answers[i].toLowerCase())
         })
     }
 
@@ -47,17 +47,16 @@ export default class Quiz extends Component {
                             {this.state.showAnswers && <th>Answer</th>}
                         </tr>
                     {this.state.array.map((obj, i) => {
-                        console.log(obj);
+                        var width = (this.state.array[i].answer.length * 8);
                         var split = obj.question.split("_____");
-                        console.log(split);
                         return <tr>
                             <td>
                                 <label>{split[0]}</label>
-                                <textarea onChange={e => this.addToArray(e.target.value, i)} style={{resize: 'none', width:"50px", height:"15px"}}/>
+                                <textarea onChange={e => this.addToArray(e.target.value, i)} style={{resize: 'none', width: width + "px", height:"15px"}}/>
                                 <label>{split[1]}</label>
                             </td>
-                                <td>{this.state.results[i] ? "Correct" : ""}</td>
-                                {this.state.showAnswers && <td>{obj.answer}</td>}
+                                <td style={{width: 100}}>{this.state.results[i] ? "Correct" : ""}</td>
+                                {this.state.showAnswers && <td style={{width: 100}}>{obj.answer}</td>}
                         </tr>
                     })}
                     </table>

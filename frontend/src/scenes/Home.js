@@ -13,6 +13,7 @@ export default class Home extends Component {
         this.props.app.text = this.state.text;
         axios.post('http://localhost:5000/post?string=' + this.state.text)
             .then(function (response) {
+                alert("Loaded");
                 console.log(response);
             })
             .catch(function (error) {
