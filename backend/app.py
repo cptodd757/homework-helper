@@ -23,6 +23,8 @@ class Poster(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument("string")
         args = parser.parse_args()
+        newInput = args["String"]
+        return yourMethod(newInput);
         test = args["string"].split()
         answer = test[0]
         test[0] = "___"
