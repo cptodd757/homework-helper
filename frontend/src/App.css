@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -23,18 +24,15 @@
 }
 
 .Quiz  {
+  margin:auto;  
   background-color: white;
   width: 50vw;
   height: 60vh;
-  margin: auto;
   border-radius: 8px;
+  text-align: left;
+  padding: 2vw 2vw 2vw 2vw;
 }
 
-.innerQuiz  {
-  width: 40vw;
-  height: 50vh;
-  margin: auto;
-}
 
 h1 {
   color: white;
