@@ -19,15 +19,22 @@ export default class Quiz extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="App"> 
+                <p>Here is the text from Home: {this.props.app.text}</p>
             
                 <div className="Quiz">
-                    <p>Here is the text from Home: {this.props.app.text}</p>
+                    <table>
+                        <tr>
+                            <th>Question</th>
+                            <th>Answer</th>
+                        </tr>
                     {this.state.array.map(obj => (
-                        <div>
-                            <h5>{obj.question} {obj.answer}</h5>
-                        </div>
+                        <tr>
+                            <td>{obj.question}</td>
+                            <td>{obj.answer}</td>
+                        </tr>
                     ))}
+                    </table>
                 </div>
             </div>
         );

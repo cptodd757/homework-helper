@@ -7,8 +7,8 @@ api = Api(app)
 CORS(app)
 
 array = [
-    {"question": "King James died in ____", "answer": "1620"},
-    {"question": "I like ____", "answer": "pizza"},
+    {"question": "King James died in ___", "answer": "1620"},
+    {"question": "I like ___", "answer": "pizza"},
     {"question": "Nico is ___", "answer": "cool"},
     {"question": "Cata ___", "answer": "lit"},
     {"question": "Reading from the ___", "answer": "server"},
