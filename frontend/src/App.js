@@ -18,7 +18,8 @@ class App extends Component {
 
       return (
       <div className="App">
-          {this.state.showHome ? <Home app={app} title={"I <3 Nico"}/> : <Quiz app={app}/>}
+          <h1>Homework Helper</h1>
+          {this.state.showHome ? <Home app={app}/> : <Quiz app={app}/>}
           <button onClick={() => this.setState({showHome: !this.state.showHome})}>{this.state.showHome ? "Show Quiz" : "Go Home"}</button>
       </div>
     );
