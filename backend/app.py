@@ -11,6 +11,7 @@ array = [
     {"question": "I like ____", "answer": "pizza"},
     {"question": "Nico is ___", "answer": "cool"},
     {"question": "Cata ___", "answer": "lit"},
+    {"question": "Reading from the ___", "answer": "server"},
 ]
 
 class Getter(Resource):
@@ -18,11 +19,17 @@ class Getter(Resource):
         return array;
         
 class Poster(Resource): 
-    def post(self, string):
+    def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument("string")
         args = parser.parse_args()
-        return args["string"]
+        test = args["string"].split()
+        answer = test[0]
+        test[0] = "___"
+        newThing = " ".join(test)
+        obj = {"question": newThing, "answer": answer}
+        array.append(obj)
+        return obj
         
 api.add_resource(Getter, "/get")
 api.add_resource(Poster, "/post")
