@@ -47,7 +47,9 @@ export default class Quiz extends Component {
                             {this.state.showAnswers && <th>Answer</th>}
                         </tr>
                     {this.state.array.map((obj, i) => {
-                        var split = obj.question.split("___");
+                        console.log(obj);
+                        var split = obj.question.split("_____");
+                        console.log(split);
                         return <tr>
                             <td>
                                 <label>{split[0]}</label>

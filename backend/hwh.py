@@ -51,10 +51,6 @@ def create_output(inputdata):
 
         words_already_quizzed = []
         result = []
-        def contains(sentence, word):
-            if sentence.index(word) != -1:
-                return True
-            return False
 
         for sentence in summary:
             best_word = ''
