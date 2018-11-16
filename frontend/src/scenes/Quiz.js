@@ -31,7 +31,7 @@ export default class Quiz extends Component {
                     {this.state.array.map(obj => {
                         var split = obj.question.split("___");
                         return <tr>
-                            <td><label>{split[0]}</label><textarea style={{width:"50px", height:"15px"}}/><label>{split[1]}</label></td>
+                            <td><label>{split[0]}</label><textarea style={{resize: 'none', width:"50px", height:"15px"}}/><label>{split[1]}</label></td>
                             <td>{obj.answer}</td>
                         </tr>
                     })}
