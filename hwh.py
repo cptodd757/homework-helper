@@ -16,6 +16,11 @@ def create_output(inputdata):
         # with io.open('linux_accept.txt', 'r', encoding="utf-8") as myfile:
         #     text=myfile.read().replace('\n', ' ')
         # #
+        DEBUG = False
+        def debug(string,variable=''):
+            if DEBUG:
+                print(string,variable)
+
 
         text = inputdata
 
@@ -29,19 +34,19 @@ def create_output(inputdata):
         clean_sentences=[clean_sent(x) for x in sentences]
         clean_document = remove_stop_words(flatten(clean_sentences).lower())
 
-        print("clean doc: ", clean_document)
+        debug("clean doc: ", clean_document)
         vectorizer = TfidfVectorizer()
         weights = vectorizer.fit_transform([clean_document])
 
-        print("weights: ",weights)
+        debug("weights: ",weights)
 
 
         summary=textRank(text,stopWords=stopwords.words('english'))
 
         df = pd.DataFrame({"tfidf":weights.toarray()[0]},index=vectorizer.get_feature_names()).sort_values(by="tfidf",ascending=False)
         df['word'] = df.index
-        print(df)
-        print(summary)
+        debug(df)
+        debug(summary)
 
 
         words_already_quizzed = []
@@ -56,17 +61,17 @@ def create_output(inputdata):
             highest = -1.0
             for word in sentence.split():
                 if word in list(df.index) and word not in words_already_quizzed:
-                    print("weight: ",df.loc[word]['tfidf'])
+                    debug("weight: ",df.loc[word]['tfidf'])
                     if df.loc[word]['tfidf'] > highest:
                         highest = df.loc[word]['tfidf']
                         best_word = word
             words_already_quizzed.append(best_word)
-            result.append({"question":sentence.replace(best_word,"___"),"answer":best_word})
+            result.append({"question":sentence.replace(best_word,"_____"),"answer":best_word})
 
-        print(result)
+        return(result)
 
 
 with io.open('linux_accept.txt', 'r', encoding="utf-8") as myfile:
         text=myfile.read().replace('\n', ' ')
 
-create_output(text)
+print(create_output(text))
