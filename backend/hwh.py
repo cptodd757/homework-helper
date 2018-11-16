@@ -62,7 +62,7 @@ def create_output(inputdata):
                         highest = df.loc[word]['tfidf']
                         best_word = word
             words_already_quizzed.append(best_word)
-            result.append({"question":sentence.replace(best_word,"_____"),"answer":best_word})
+            result.append({"question":sentence.replace(best_word,"_____",1),"answer":best_word})
 
         return(result)
 
