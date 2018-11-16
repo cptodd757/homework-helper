@@ -13,7 +13,7 @@ export default class Home extends Component {
             <div className="App">
                 <h1>{this.props.title}</h1>
                 <textarea value={this.state.text} onChange={e => this.setState({text: e.target.value})}/>
-                <button onClick={() => alert(this.state.text)}>Submit</button>
+                <button onClick={() => this.props.app.text = this.state.text}>Submit</button>
             </div>
         );
     }
