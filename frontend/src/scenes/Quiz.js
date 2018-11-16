@@ -39,6 +39,7 @@ export default class Quiz extends Component {
     render() {
         return (
             <div className="App">
+                {this.state.results && this.state.results.filter(obj => obj).length === this.state.results.length && <p>You win</p>}
                 <div className="Quiz">
                     <table>
                         <tr>
@@ -62,8 +63,6 @@ export default class Quiz extends Component {
                     </table>
                     <br/>
                     <button style={{width: '100%'}} onClick={() => this.setState({showAnswers: !this.state.showAnswers})}>{this.state.showAnswers ? "Hide answers" : "Show answers"}</button>
-
-
                 </div>
             </div>
         );
