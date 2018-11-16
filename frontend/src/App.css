@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: powderblue;
+  background-color: steelblue;
 }
 
 .App-logo {
@@ -21,4 +21,18 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Quiz  {
+  background-color: whitesmoke;
+  width: 50vw;
+  margin: auto;
+  
+}
+h1 {
+  color: white;
+}
+
+p  {
+  color: black;
 }
