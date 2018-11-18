@@ -2,6 +2,9 @@
 
 Project created by Charlie Todd, Natalie Tarn, Nico Bodkin, Matt O'Boyle, Yuki Peters for our Catalyst New Member Project
 
+<p align="center">
+![logo](https://raw.githubusercontent.com/ntarn/homework-helper/master/logo.png)
+</p>
 
 ## Why?
 
@@ -16,4 +19,3 @@ Just copy and paste your notes into our website, click submit, and you have an i
 * Python NLP  
 
 
-![logo](https://raw.githubusercontent.com/ntarn/homework-helper/master/logo.png)
