@@ -3,7 +3,7 @@
 Project created by Charlie Todd, Natalie Tarn, Nico Bodkin, Matt O'Boyle, Yuki Peters for our Catalyst New Member Project
 
 <p align="center">
-![logo](https://raw.githubusercontent.com/ntarn/homework-helper/master/logo.png)
+  <img width="460" height="300" src="https://raw.githubusercontent.com/ntarn/homework-helper/master/logo.png">
 </p>
 
 ## Why?
