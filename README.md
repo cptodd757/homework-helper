@@ -14,3 +14,6 @@ Just copy and paste your notes into our website, click submit, and you have an i
 
 * React
 * Python NLP  
+
+
+![logo](https://raw.githubusercontent.com/ntarn/homework-helper/master/logo.png)
